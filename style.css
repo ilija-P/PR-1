@@ -1,0 +1,187 @@
+/* Cela stranica kako je namestena, da nema margine,paddinge(sto znaci da je sve namesteno ka levom cosku po defaultu) i border-box je nacin na koji ce se  nacin racunati visina i sirina*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Organic velicina,boja i koji font(izabrali smo taj font preko google fontsova) */
+.navbar-brand {
+  font-size: 2rem;
+  color: black;
+  font-family: "Lobster", cursive;
+}
+
+/* Organic ostaje i dalje crno cak i kada prodjemo misem  */
+.navbar-brand:hover {
+  color: black;
+}
+
+/* Linkovi u navbaru */
+.nav-link {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: black;
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+}
+
+/* Linkovi u navbaru ostaju crni cak i kada prodjete misom */
+.nav-link:hover {
+  color: black;
+}
+
+/* SearchBar sa desne strane */
+.search {
+  height: 40px;
+  width: 80%;
+  border-radius: 60px;
+  outline: none;
+  margin-right: -35px;
+  font-family: "Rubik", sans-serif;
+  border: 2px solid rgb(248, 26, 92);
+}
+
+/* Navbar dugme */
+.btn0 {
+  height: 40px;
+  width: 40%;
+  outline: none;
+  border: none;
+  background: rgb(248, 26, 92);
+  color: white;
+  border-radius: 60px;
+  font-weight: 700;
+}
+
+/* Prva background slika, cover(na tom celom delu),visina slike, pozicija, sirina */
+.main {
+  background: url(./img/bg1.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: 50% 50%;
+  width: 100%;
+}
+
+/* Glavni h1 (Nature Has Always Cared For Us!) velicina i jacina fonta */
+.main h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+/* Velicina sirina dugmeta bez bordera i  outlinova (nema nista oko dugmeta) njegova boja,boja teksta(bela), sirina teksta i oblik buttona(border radius)*/
+.btn1 {
+  height: 45px;
+  width: 35%;
+  border: none;
+  outline: none;
+  background-color: rgb(248, 26, 92);
+  color: white;
+  font-weight: 700;
+  border-radius: 60px;
+}
+
+/* Kada prodjemo misem dugme promeni boju u toj meri */
+.btn1:hover {
+  background-color: rgb(223, 15, 77);
+  transition: 0.5s;
+}
+
+/* Odvojili smo tekstove jedne od drugih */
+h1 {
+  font-weight: 700px;
+}
+
+/* Koristili smo sajt -> box shadow generator */
+.card:hover {
+  box-shadow: -2px -1px 25px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -2px -1px 25px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px -1px 25px -4px rgba(0, 0, 0, 0.75);
+  transition: 0.5s;
+}
+
+/* Brisanje cene (Moramo oznaciti span jer ako to ne uradimo sve sto je pod cenom ce se obrisati) */
+.price span{
+  text-decoration: line-through;
+}
+
+/* Slika u backgroundu */
+.apple {
+  background: url(./img/fbg2.jpg) no-repeat;
+  background-size: cover;
+  height: 88vh;
+  width: 100%;
+}
+
+/* Ulepsavanje teksta i pozicioniranje preko flex-boxa */
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 29vh;
+  text-shadow: 2px 3px rgba(0, 0, 0, 0.75);
+  font-family: "Lobster", cursive;
+}
+
+/* footer */
+.news {
+  background-color: black;
+  color: white;
+}
+
+/* Dugme kod footera */
+.btn2 {
+  height: 45px;
+  width: 100px;
+  background: white;
+  margin-left: -10px;
+  border: 2px solid white;
+  font-weight: 600;
+}
+
+/* footer navbar */
+.news input {
+  height: 45px;
+  width: 55%;
+  border: 2px solid white;
+  outline: none;
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+
+/* Kada kazemo da je margina 0 onda su tekstovi spojeni(Jer nema margine da ih odvaja) */
+.news p {
+  margin: 0;
+}
+
+.info p:hover{
+  color:rgb(223, 15, 77);
+}
+
+/* Velicina,boja za sajtove facebook,twitter... */
+.fab {
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding-right: 5px;
+}
+
+.fab:hover {
+  color:rgb(223, 15, 77);
+}
+
+/* Nestane dok ne bude scrolovano dole, transition-objasnjava da ce se sve pojaviti za 2s */
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 1.3s ease;
+}
+
+/* Kada je scrol na toj stranici videce se */
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
